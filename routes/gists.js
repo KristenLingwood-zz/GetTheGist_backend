@@ -20,7 +20,7 @@ router.get('/', async (req, res, next) => {
 
 router.post('/', async (req, res, next) => {
   try {
-    const validation = validate(req.body, gistPostSchema);
+    let validation = validate(req.body, gistPostSchema);
     if (!validation.valid) {
       return next(
         new APIError(
@@ -40,6 +40,19 @@ router.post('/', async (req, res, next) => {
       ]
     );
     return res.json(newGist.rows[0]);
+  } catch (err) {
+    return next(err);
+  }
+});
+
+// GET /gists/:gistID
+router.get('/:gistID', async (req, res, next) => {
+  try {
+    let foundGist = await db.query(
+      `SELECT filename, description, content FROM gists WHERE id=$1`,
+      [req.params.gistID]
+    );
+    return res.json(foundGist.rows[0]);
   } catch (err) {
     return next(err);
   }

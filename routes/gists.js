@@ -58,4 +58,33 @@ router.get('/:gistID', async (req, res, next) => {
   }
 });
 
+// PATCH /gists/:gistID
+router.patch('/:gistID', async (req, res, next) => {
+  try {
+    let updatedGist = await db.query(
+      'UPDATE gists SET filename=$1, description=$2, extension=$3, content=$4 WHERE id=$5 RETURNING *',
+      [
+        req.body.filename,
+        req.body.description,
+        req.body.extension,
+        req.body.content,
+        req.params.gistID
+      ]
+    );
+    return res.json(updatedGist.rows[0]);
+  } catch (err) {
+    return next(err);
+  }
+});
+
+// DELETE /gists/:gistID
+router.delete('/:gistID', async (req, res, next) => {
+  try {
+    await db.query('DELETE FROM gists WHERE id=$1', [req.params.gistID]);
+    return res.json({ message: 'Gist deleted' });
+  } catch (err) {
+    return next(err);
+  }
+});
+
 module.exports = router;

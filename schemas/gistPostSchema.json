@@ -1,0 +1,46 @@
+{
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "filename": {
+      "$id": "/properties/filename",
+      "type": "string",
+      "title": "The Filename Schema ",
+      "default": "",
+      "examples": ["FirstGist.js"],
+      "minLength": 1,
+      "maxLength": 55
+    },
+    "description": {
+      "$id": "/properties/description",
+      "type": "string",
+      "title": "The Description Schema ",
+      "default": "",
+      "examples": ["first gist"],
+      "minLength": 1,
+      "maxLength": 55
+    },
+    "extension": {
+      "$id": "/properties/extension",
+      "type": "string",
+      "format": "string",
+      "title": "The Extension Schema ",
+      "default": "",
+      "examples": [".js"],
+      "minLength": 1,
+      "maxLength": 10
+    },
+    "content": {
+      "$id": "/properties/content",
+      "type": "string",
+      "format": "string",
+      "title": "The Content Schema ",
+      "default": "",
+      "examples": ["console.log('FIRST!!!11!1!!!')"],
+      "minLength": 1,
+      "maxLength": 1000
+    }
+  },
+  "required": ["filename", "extension", "content"]
+}

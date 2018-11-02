@@ -10,6 +10,10 @@
 4. `psql < schema.sql`
 5. `node server.js`
 
+### Tests:
+
+1. `npm test`
+
 ### Endpoints
 
 #### '/getthe/gist'

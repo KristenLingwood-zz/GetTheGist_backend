@@ -16,12 +16,12 @@
 
 ### Endpoints
 
-#### '/getthe/gist'
+#### '/gist'
 
 GET: returns an array of gists
 POST: creates a new gist and returns that gist
 
-#### '/getthe/gist/:gistID
+#### '/gist/:gistID
 
 GET: returns the specified gist by ID
 PATCH: updates specified gist

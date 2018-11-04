@@ -12,9 +12,7 @@ app.use(morgan('dev'));
 
 app.use(cors());
 
-
 app.use('/gists', gistRoutes);
-
 
 app.use((error, req, res, next) => {
   // format built-in errors

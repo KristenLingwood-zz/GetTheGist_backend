@@ -27,4 +27,4 @@ POST: creates a new gist and returns that gist.
 
 GET: returns the specified gist by ID\
 PATCH: updates specified gist\
-DELETE: destroys speficied gist\
+DELETE: destroys speficied gist

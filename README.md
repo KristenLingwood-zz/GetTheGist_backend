@@ -20,11 +20,11 @@ Endpoints can be accessed publically, but are designed to serve the front end si
 
 #### '/gist'
 
-GET: returns an array of gists
+GET: returns an array of gists\
 POST: creates a new gist and returns that gist.
 
 #### '/gist/:gistID
 
-GET: returns the specified gist by ID
-PATCH: updates specified gist
-DELETE: destroys speficied gist
+GET: returns the specified gist by ID\
+PATCH: updates specified gist\
+DELETE: destroys speficied gist\

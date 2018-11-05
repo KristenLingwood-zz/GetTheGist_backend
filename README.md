@@ -16,7 +16,7 @@
 
 ### Endpoints
 
-Endpoints can be accessed publically, but are designed to serve the front end single page app found [here](https://github.com/KristenLingwood/GetTheGist_frontend)
+Endpoints can be accessed publicly, but are designed to serve the front end single page app found [here](https://github.com/KristenLingwood/GetTheGist_frontend)
 
 #### '/gist'
 

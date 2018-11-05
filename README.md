@@ -16,10 +16,12 @@
 
 ### Endpoints
 
+Endpoints can be accessed publically, but are designed to serve the front end single page app found [here](https://github.com/KristenLingwood/GetTheGist_frontend)
+
 #### '/gist'
 
 GET: returns an array of gists
-POST: creates a new gist and returns that gist
+POST: creates a new gist and returns that gist.
 
 #### '/gist/:gistID
 
